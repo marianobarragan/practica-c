@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/utnso/projects/headers_test/src/cat.hpp
+string
+-
+
+/home/utnso/projects/headers_test/src/main.cpp
+cat.hpp
+/home/utnso/projects/headers_test/src/cat.hpp
+iostream
+-
+

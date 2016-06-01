@@ -1,0 +1,5 @@
+/home/utnso/projects/headers_test/build/CMakeFiles/edit_cache.dir
+/home/utnso/projects/headers_test/build/CMakeFiles/rebuild_cache.dir
+/home/utnso/projects/headers_test/build/src/CMakeFiles/edit_cache.dir
+/home/utnso/projects/headers_test/build/src/CMakeFiles/rebuild_cache.dir
+/home/utnso/projects/headers_test/build/src/CMakeFiles/headers_test.dir
