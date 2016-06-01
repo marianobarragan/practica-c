@@ -27,18 +27,8 @@ namespace ct{
   
   std::ostream& operator<<(ostream& os, const Cat& cat)
     {
-      char *ErrorTypes[] =
-	{
-	  "PACHORRA",
-	  "ACTIVO"
-      };
 
-//cout << ErrorTypes[anError];
-      
-      
-      
-      
-      os << cat.nombre_ << caracter_t.PACHORRA ;
+      os << cat.nombre_ << " ACA va el caracter "; //caracter_t.PACHORRA ;
       return os;
     }
  

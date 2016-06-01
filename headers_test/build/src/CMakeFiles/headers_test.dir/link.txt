@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   CMakeFiles/headers_test.dir/main.cpp.o CMakeFiles/headers_test.dir/cat.cpp.o  -o headers_test  -L/home/utnso/devel/sdk/lib -rdynamic 
