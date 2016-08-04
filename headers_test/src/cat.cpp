@@ -4,12 +4,13 @@
 
 namespace ct{
   
+  
   Cat::Cat(std::string nombre ,caracter_t caracter): nombre_(nombre), caracter_(caracter)
   {
       imprimirNombre();
   }
   
-  Cat::Cat(): nombre_("sin nombre"), caracter_(caracter_t::ACTIVO)
+  Cat::Cat(): nombre_("sin nombre"), caracter_(enums::caracter_t::ACTIVO)
   {
       imprimirNombre();
   }
@@ -25,24 +26,32 @@ namespace ct{
     
   }
   
-  std::ostream& operator<<(ostream& os, const Cat& cat)
-    {
-
-      os << cat.nombre_ << " ACA va el caracter "; //caracter_t.PACHORRA ;
-      return os;
-    }
- 
-  
-  caracter_t Cat::getCaracter(){
+  enums::caracter_t Cat::getCaracter(){
     return caracter_;
   }
   
   void Cat::setNombre(std::string nombre){
     nombre_ = nombre;
   }
-  void Cat::setCaracter(ct::caracter_t caracter){
+  void Cat::setCaracter(enums::caracter_t caracter){
     caracter_ = caracter;
   }
+  
+  static const char * enumStrings[] = { "PACHORRA", "ACTIVA" };
+    
+  const char * getTextForEnum( int enumVal )
+    {
+      return enumStrings[enumVal];
+    }
+  
+  ostream &operator<<( ostream &output, const Cat &dt )
+    {
+      
+      int numero = static_cast<int>(dt.getCaracter());
+      output << "nombre: " << dt.nombre_ << ", caracter: " << getTextForEnum( numero);
+      return output;
+      
+    }
   
   void Cat::imprimirNombre(){
     std::cout << "mi nombre es " << nombre_ << std::endl;

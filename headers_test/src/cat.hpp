@@ -4,31 +4,30 @@
 //#include <boost/noncopyable.hpp>
 #include <string>
 #include <iostream>
+#include "enums.hpp"
 
 using namespace std;
+using namespace enums;
 
-namespace ct{
-  
-  enum class caracter_t {PACHORRA, ACTIVO};
-  
+namespace ct{  
   
   class Cat{
     
     public:
     
-      Cat(std::string nombre,ct::caracter_t caracter);
+      Cat(std::string nombre, enums::caracter_t caracter);
       Cat();
       ~Cat();
       void hola();
-      caracter_t getCaracter();
+      enums::caracter_t getCaracter();
       void setNombre(std::string);
-      void setCaracter(ct::caracter_t);
-      friend ostream& operator<<(ostream& os, const Cat& dt);
+      void setCaracter(caracter_t);
+      friend ostream &operator<<( ostream &output, const Cat &dt );
       
       
     private:
       void imprimirNombre();
-      caracter_t caracter_;
+      enums::caracter_t caracter_;
       std::string nombre_;
       
   };
