@@ -17,6 +17,7 @@ int main(int argc, char **argv) {
     auto gato1 = std::make_shared<ct::Cat>("cesar",caracter_t::PACHORRA);
     gato1->hola();
     
+    cout << gato1->getNombre() << endl;
     cout << gato1 << endl;
     //return 0;
 }

@@ -9,6 +9,7 @@ namespace enums {
 
   
   enum class caracter_t {PACHORRA, ACTIVO};
+  static const char * enumStrings[] = { "PACHORRA", "ACTIVA" };
   
 }
 

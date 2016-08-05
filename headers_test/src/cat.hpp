@@ -22,6 +22,7 @@ namespace ct{
       enums::caracter_t getCaracter();
       void setNombre(std::string);
       void setCaracter(caracter_t);
+      std::string getNombre();
       friend ostream &operator<<( ostream &output, const Cat &dt );
       
       

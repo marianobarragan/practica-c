@@ -1,4 +1,5 @@
 #include "cat.hpp"
+#include "enums.hpp"
 #include <iostream>
 #include <map>
 
@@ -33,27 +34,39 @@ namespace ct{
   void Cat::setNombre(std::string nombre){
     nombre_ = nombre;
   }
+  
+  std::string Cat::getNombre(){
+    return nombre_;
+  }
+  
   void Cat::setCaracter(enums::caracter_t caracter){
     caracter_ = caracter;
   }
-  
-  static const char * enumStrings[] = { "PACHORRA", "ACTIVA" };
+    
     
   const char * getTextForEnum( int enumVal )
     {
-      return enumStrings[enumVal];
+      return enums::enumStrings[enumVal];
     }
-  
-  ostream &operator<<( ostream &output, const Cat &dt )
+
+  std::ostream &operator<<( std::ostream &output, Cat &dt ){
+    
+      int indice = static_cast<int>(dt.getCaracter());
+      output << "nombre: " << dt.getNombre() << ", caracter: " << getTextForEnum( indice);
+      return output;
+      
+  }
+/*
+  std::ostream &operator<<( std::ostream &output, Cat &dt )
     {
       
-      int numero = static_cast<int>(dt.getCaracter());
-      output << "nombre: " << dt.nombre_ << ", caracter: " << getTextForEnum( numero);
+      int indice = static_cast<int>(dt.getCaracter());
+      output << "nombre: " << dt.getNombre() << ", caracter: " << getTextForEnum( indice);
       return output;
       
     }
-  
+ */
   void Cat::imprimirNombre(){
-    std::cout << "mi nombre es " << nombre_ << std::endl;
+    std::cout << "mi nombre es " << getNombre() << std::endl;
   }
 }
