@@ -8,6 +8,6 @@ include_directories(
 link_directories( ${sdk_path}/lib )
 
  
-add_executable(headers_test main.cpp cat.cpp)
+add_executable(headers_test main.cpp cat.cpp dog.cpp repoAnimales.cpp)
    
 TARGET_LINK_LIBRARIES(headers_test)

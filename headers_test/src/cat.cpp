@@ -16,16 +16,19 @@ namespace ct{
       imprimirNombre();
   }
   
-  
   Cat::~Cat(){
     std::cout << "gato eliminado: " << nombre_ << std::endl;
   }
   
-  
   void Cat::hola(){
-    std::cout << "hola" << std::endl;
-    
+    cout << "hola, soy un gato" << endl;
   }
+  
+  bool Cat::podesPasear()
+  {
+    true;
+  }
+
   
   enums::caracter_t Cat::getCaracter(){
     return caracter_;
@@ -49,23 +52,6 @@ namespace ct{
       return enums::enumStrings[enumVal];
     }
 
-  std::ostream &operator<<( std::ostream &output, Cat &dt ){
-    
-      int indice = static_cast<int>(dt.getCaracter());
-      output << "nombre: " << dt.getNombre() << ", caracter: " << getTextForEnum( indice);
-      return output;
-      
-  }
-/*
-  std::ostream &operator<<( std::ostream &output, Cat &dt )
-    {
-      
-      int indice = static_cast<int>(dt.getCaracter());
-      output << "nombre: " << dt.getNombre() << ", caracter: " << getTextForEnum( indice);
-      return output;
-      
-    }
- */
   void Cat::imprimirNombre(){
     std::cout << "mi nombre es " << getNombre() << std::endl;
   }
